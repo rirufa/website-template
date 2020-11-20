@@ -1,0 +1,12 @@
+﻿include _resources.pug
+
+header
+	block custom_header
+main
+	block content
+footer
+	ul#lang_switch
+		each item in get_langs()
+			li
+				+gen_lang_switch(`${item}`,`${item}`)
+	block custom_footer

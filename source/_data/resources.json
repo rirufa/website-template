@@ -1,0 +1,52 @@
+{
+	"ja": {
+		"company_info": {
+			"name": "DUMMY",
+			"tel": "00-1234-5678",
+			"fax_tel": "00-1234-5678",
+			"mobile" : "00-1234-5678",
+			"opentime": "営業時間 11時から18時",
+			"mail": "test@yahoo.co.jp",
+			"about_page_url": "/about.html",
+			"about_page_title": "DUMMYについて"
+		},
+		"index": {
+			"prerelease_title":"プレリリース",
+			"prerelease_list":[
+				{
+					"date":"1900/01/01",
+					"text":"dummy"
+				},
+				{
+					"date":"1900/01/02",
+					"text":"dummy"
+				}
+			]
+		}
+	},
+	"en": {
+		"company_info": {
+			"name": "DUMMY",
+			"tel": "00-1234-5678",
+			"fax_tel": "00-1234-5678",
+			"mobile" : "00-1234-5678",
+			"opentime": "OPEN TIME 11:00-18:00",
+			"mail": "test@yahoo.co.jp",
+			"about_page_url": "/about.html",
+			"about_page_title": "ABOUT DUMMY"
+		},
+		"index": {
+			"prerelease_title":"NEWS",
+			"prerelease_list":[
+				{
+					"date":"1900/01/01",
+					"text":"dummy"
+				},
+				{
+					"date":"1900/01/02",
+					"text":"dummy"
+				}
+			]
+		}
+	}
+}
