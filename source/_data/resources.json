@@ -1,5 +1,6 @@
 {
 	"ja": {
+		"lang_name":"日本語",
 		"company_info": {
 			"name": "DUMMY",
 			"tel": "00-1234-5678",
@@ -7,8 +8,11 @@
 			"mobile" : "00-1234-5678",
 			"opentime": "営業時間 11時から18時",
 			"mail": "test@yahoo.co.jp",
-			"about_page_url": "/about.html",
-			"about_page_title": "DUMMYについて"
+			"about_page_url": "/ja/about.html",
+			"about_page_title": "DUMMYについて",
+			"image_path":"/image/accelerate.png",
+			"mobile_image_path":"/image/accelerate_mobile.png",
+			"query_button_label":"お問い合わせはこちらから"
 		},
 		"index": {
 			"prerelease_title":"プレリリース",
@@ -22,9 +26,24 @@
 					"text":"dummy"
 				}
 			]
-		}
+		},
+		"pages":[
+			{
+				"path":"/ja/test",
+				"title":"TEST-JA",
+				"thumbnail":"",
+				"summary":"ABOUT TEST"
+			},
+			{
+				"path":"/ja/test2",
+				"title":"TEST-JA",
+				"thumbnail":"",
+				"summary":"ABOUT TEST"
+			}
+		]
 	},
 	"en": {
+		"lang_name":"English",
 		"company_info": {
 			"name": "DUMMY",
 			"tel": "00-1234-5678",
@@ -32,8 +51,11 @@
 			"mobile" : "00-1234-5678",
 			"opentime": "OPEN TIME 11:00-18:00",
 			"mail": "test@yahoo.co.jp",
-			"about_page_url": "/about.html",
-			"about_page_title": "ABOUT DUMMY"
+			"about_page_url": "/en/about.html",
+			"about_page_title": "ABOUT DUMMY",
+			"image_path":"/image/accelerate.png",
+			"mobile_image_path":"/image/accelerate_mobile.png",
+			"query_button_label":"Query"
 		},
 		"index": {
 			"prerelease_title":"NEWS",
@@ -47,6 +69,20 @@
 					"text":"dummy"
 				}
 			]
-		}
+		},
+		"pages":[
+			{
+				"path":"/en/test",
+				"title":"TEST-EN",
+				"thumbnail":"",
+				"summary":"ABOUT TEST"
+			},
+			{
+				"path":"/en/test2",
+				"title":"TEST2-EN",
+				"thumbnail":"",
+				"summary":"ABOUT TEST"
+			}
+		]
 	}
 }
