@@ -1,4 +1,4 @@
-﻿include _resources.pug
+﻿include _common
 
 header
 	block custom_header
@@ -6,7 +6,7 @@ main
 	block content
 footer
 	ul#lang_switch
-		each item in get_langs()
+		each item in gen_lang_switches()
 			li
-				+gen_lang_switch(`${item}`,`${item}`)
+				a(href=`${item.url}`) #{item.label}
 	block custom_footer

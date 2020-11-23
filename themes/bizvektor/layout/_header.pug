@@ -13,6 +13,6 @@ nav.global_nav
   ul.top_menu
     li
       a(href='/') TOP
-    each item in get_pages().toArray()
+    each item in get_pages()
       li.dropdown-parent
-        a(href=`${url_for(item.path)}`) #{item.title}
+        a(href=`${item.path}`) #{item.title}

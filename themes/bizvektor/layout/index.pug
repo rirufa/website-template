@@ -4,17 +4,17 @@ block custom_header
 	include _header
 	#main_titile
 		picture
-			source(media="(max-width: 768px)" srcset="/image/accelerate_mobile.png")
-			img(src='/image/accelerate.png')
+			source(media="(max-width: 768px)" srcset=`${res.company_info.mobile_image_path}`)
+			img(src=`${res.company_info.image_path}`)
 
 block content
 		#infomation
 			#topics
-				each item in get_pages().toArray()
+				each item in get_pages()
 					#summary
 						img(src=`${item.thumbnail}`)
 						p
-							a(href=`${url_for(item.path)}`) #{item.title} #{item.summary}
+							a(href=`${item.path}`) #{item.title} #{item.summary}
 			#prerelease
 				h2 #{res.index.prerelease_title}
 				table
