@@ -1,3 +1,9 @@
+base-color = #fff
+main-color = #e8c135
+//2と3はアクセントカラー
+accent-color = #ababab #b2871a #daa520 #e5e5e5 #f5f5f5 #b9b9b9 #666
+string-color = #ababab #b2871a #daa520 #e5e5e5 #f5f5f5 #b9b9b9 #666
+
 *
     margin 0
     padding 0
@@ -8,12 +14,12 @@ a
 .address
     & > .telphone
         font-size 22pt
-        color #e8c135
+        color main-color
 
 #company_infomation
     background-color white
     padding 10px 10px
-    border-bottom solid 3px #e8c135
+    border-bottom solid 3px main-color
     & > .address
         & > p
             text-align right
@@ -23,8 +29,8 @@ a
     font-weight bold
 
 header
-    border-top solid 3px #e8c135
-    background-color #e8c135
+    border-top solid 3px main-color
+    background-color main-color
 
 #main_titile
     & > h1
@@ -41,7 +47,7 @@ header
     line-height 2.5em
     font-weight bold
     color white
-    background linear-gradient(to bottom, #e8c135 0%, #daa520  100%)
+    background linear-gradient(to bottom, main-color 0%, accent-color[3]  100%)
     box-shadow 0px 1px 3px 0px rgba(0,0,0,0.75)
     padding-left 20px
 
@@ -49,13 +55,13 @@ header
     & > ul
         list-style-type none
         & > li
-            border-top 1px solid #e5e5e5
-            background-color #fff
+            border-top 1px solid accent-color[3]
+            background-color base-color
             &:hover
                 & > a
                     color white
         & > li#current
-            background linear-gradient(to bottom, #e8c135 0%, #daa520  100%)
+            background linear-gradient(to bottom, main-color 0%, accent-color[1]  100%)
             box-shadow 0px 1px 3px 0px rgba(0,0,0,0.75)
             & > a
                 color white
@@ -69,14 +75,14 @@ header
     ul
         li
             &:hover
-                background linear-gradient(to bottom, #daa520 0%, #b2871a  100%)
+                background linear-gradient(to bottom, accent-color[1] 0%, accent-color[2]  100%)
 
 .dropdown-content
     list-style none
-    background-color #fff
+    background-color base-color
     width 100%
     & > li
-        border-top 1px solid #e5e5e5
+        border-top 1px solid accent-color[3]
         &:hover
             & > a
                 color white
@@ -85,8 +91,8 @@ header
             padding-left 40px
 
 #bread
-    background-color #f5f5f5
-    border-bottom 1px solid #e5e5e5
+    background-color accent-color[4]
+    border-bottom 1px solid accent-color[3]
     ul
         list-style-type none
         padding 20px 10px
@@ -101,16 +107,16 @@ header
 
 main
     background-color white
-    border-bottom solid 3px #daa520
+    border-bottom solid 3px accent-color[1]
     h2
-        border-top solid 3px #e8c135
-        border-left solid 1px #ababab
-        border-right solid 1px #ababab
-        border-bottom solid 1px #ababab
+        border-top solid 3px main-color
+        border-left solid 1px accent-color[0]
+        border-right solid 1px accent-color[0]
+        border-bottom solid 1px accent-color[0]
         line-height 2em
         padding-left 20px
     h3
-        border-left solid 3px #e8c135
+        border-left solid 3px main-color
         padding-left 10px
         line-height 1.5em
     & > div
@@ -122,11 +128,11 @@ main
         border-collapse collapse
     th
         background-color #eee
-        border 1px solid #b9b9b9
+        border 1px solid accent-color[5]
         padding 10px
         line-height 1.5em
     td
-        border 1px solid #b9b9b9
+        border 1px solid accent-color[5]
         padding 10px
         line-height 1.5em
     p
@@ -135,8 +141,8 @@ main
         border-style solid
         border-width 6px
         border-image url(bg_slash.png) 6 round
-        background-color #f5f5f5
-        outline solid 1px #e5e5e5
+        background-color accent-color[4]
+        outline solid 1px accent-color[3]
         padding 10px
         display table
         width 100%
@@ -154,9 +160,9 @@ main
     & > .query_button
         border-style solid
         border-width 6px
-        border-color #fff
-        background-color #daa520
-        outline solid 1px #e5e5e5
+        border-color base-color
+        background-color accent-color[1]
+        outline solid 1px accent-color[3]
         display table-cell
         text-align center
         vertical-align middle
@@ -169,14 +175,14 @@ main
 .sidenav
     list-style-type none
     li
-        border-bottom solid 1px #ababab
+        border-bottom solid 1px accent-color[0]
         line-height 1.5em
         padding 10px
         margin 0px
         &:hover
-            background-color #f5f5f5
+            background-color accent-color[4]
     li#sub_current
-        background-color #efefef
+        background-color accent-color[4]
     a,del
         background url("./icon_arrow1_gray.gif") 10px 50% no-repeat
         display block
@@ -184,28 +190,28 @@ main
 .rss-items
     list-style-type none
     li
-        border-bottom solid 1px #ababab
+        border-bottom solid 1px accent-color[0]
         line-height 1.5em
         padding 10px
         margin 0px
         display flex
         &:hover
-            background-color #f5f5f5
+            background-color accent-color[4]
         span
             align-self: center
         *
-            color #666
+            color accent-color[6]
 
 footer
-    border-top solid 20px #e8c135
+    border-top solid 20px main-color
     padding 10px 10px
-    color #ababab
+    color accent-color[0]
     background-color black
     height 200px
     #copyright
         text-align center
     a
-        color #ababab
+        color accent-color[0]
 
 #lang_switch
     list-style-type none
@@ -229,11 +235,11 @@ footer
         display none
     .global_nav
         & > ul
-            background linear-gradient(to bottom, #e5e5e5 0%, #fff 50%)
+            background linear-gradient(to bottom, accent-color[3] 0%, base-color 50%)
             & > li
-                border-left solid 1px #ababab
-                background linear-gradient(to bottom, #e5e5e5 0%, #fff 50%)
+                border-left solid 1px accent-color[0]
+                background linear-gradient(to bottom, accent-color[3] 0%, base-color 50%)
                 &:last-child
-                    border-right solid 1px #ababab
+                    border-right solid 1px accent-color[0]
     .dropdown-content
         box-shadow 1px 1px 3px rgba(0,0,0,0.2)
