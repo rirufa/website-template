@@ -2,11 +2,12 @@ base-color = #fff
 main-color = #e8c135
 //2と3はアクセントカラー
 accent-color = #ababab #b2871a #daa520 #e5e5e5 #f5f5f5 #b9b9b9 #666
-string-color = #ababab #b2871a #daa520 #e5e5e5 #f5f5f5 #b9b9b9 #666
+string-color = #000
 
 *
     margin 0
     padding 0
+    color string-color
 
 a
     text-decoration none
@@ -14,10 +15,9 @@ a
 .address
     & > .telphone
         font-size 22pt
-        color main-color
 
 #company_infomation
-    background-color white
+    background-color base-color
     padding 10px 10px
     border-bottom solid 3px main-color
     & > .address
@@ -39,14 +39,12 @@ header
         padding-top 10px
         padding-bottom 10px
         line-height 2em
-        color white
         background url("pageTit_bg.png") left 50% no-repeat
 
 .top_menu_label
     height 2.5em
     line-height 2.5em
     font-weight bold
-    color white
     background linear-gradient(to bottom, main-color 0%, accent-color[3]  100%)
     box-shadow 0px 1px 3px 0px rgba(0,0,0,0.75)
     padding-left 20px
@@ -70,7 +68,6 @@ header
             height 2.5em
             line-height 2.5em
             font-weight bold
-            color black
             padding-left 20px
     ul
         li
@@ -106,7 +103,7 @@ header
                     content ""
 
 main
-    background-color white
+    background-color base-color
     border-bottom solid 3px accent-color[1]
     h2
         border-top solid 3px main-color
@@ -210,7 +207,7 @@ footer
     height 200px
     #copyright
         text-align center
-    a
+    *
         color accent-color[0]
 
 #lang_switch
