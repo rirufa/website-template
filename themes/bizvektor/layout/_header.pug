@@ -4,7 +4,8 @@
   #logo
     = res.company_info.name
   .address
-    p(telphone=`${res.company_info.tel}`)
+    p
+      a(telphone=`${res.company_info.tel}`) #{res.company_info.tel}
     p
       a(href=`mailto:${res.company_info.mail}`) #{res.company_info.mail}
     p= res.company_info.opentime
