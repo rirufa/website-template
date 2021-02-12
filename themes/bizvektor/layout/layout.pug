@@ -8,6 +8,7 @@ head
 	| !{css('/css/base.css')}
 	| !{js('/script/hover.js')}
 body
+	- console.log(page)
 	- if(page.base == '')
 		script(type='text/javascript'). 
 			(function(){
