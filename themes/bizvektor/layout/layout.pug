@@ -8,8 +8,7 @@ head
 	| !{css('/css/base.css')}
 	| !{js('/script/hover.js')}
 body
-	- console.log(page)
-	- if(page.base == '')
+	- if(page.path ==  'index.html')
 		script(type='text/javascript'). 
 			(function(){
 				Object.defineProperty(document,"referrer",{value:document.referrer });
