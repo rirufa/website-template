@@ -21,7 +21,7 @@ pretty_urls:
   trailing_index: false
   trailing_html: false
 
-theme: bizvektor
+theme: singleline
 
 highlight:
   enable: true
