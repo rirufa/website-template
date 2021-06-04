@@ -19,10 +19,11 @@ block content
 			#prerelease
 				h2 #{res.index.prerelease_title}
 				table
-					each item in res.index.prerelease_list
+					each item in get_posts()
 						tr
-							td #{item.date}
-							td #{item.text}
+							td #{date(item.date, "YYYY-MM-DD" )}
+							td
+								a(href=`/${item.path}`) #{item.title}
 		#sidebar
 
 block custom_footer

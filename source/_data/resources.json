@@ -15,17 +15,7 @@
 			"query_button_label":"お問い合わせはこちらから"
 		},
 		"index": {
-			"prerelease_title":"プレリリース",
-			"prerelease_list":[
-				{
-					"date":"1900/01/01",
-					"text":"dummy"
-				},
-				{
-					"date":"1900/01/02",
-					"text":"dummy"
-				}
-			]
+			"prerelease_title":"プレリリース"
 		}
 	},
 	"en": {
@@ -44,17 +34,7 @@
 			"query_button_label":"Query"
 		},
 		"index": {
-			"prerelease_title":"NEWS",
-			"prerelease_list":[
-				{
-					"date":"1900/01/01",
-					"text":"dummy"
-				},
-				{
-					"date":"1900/01/02",
-					"text":"dummy"
-				}
-			]
+			"prerelease_title":"NEWS"
 		}
 	}
 }
