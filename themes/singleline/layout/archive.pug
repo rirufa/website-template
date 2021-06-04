@@ -3,7 +3,13 @@ extend _page_base
 block custom_header
 	include _header
 	#main_titile
-		- if(page != undefined)
+		- if(is_archive())
+			h1 #{res.index.oldprerelease_title}
+		- else if(is_category())
+			h1 #{res.index.oldprerelease_title_by_category}:#{page.category}
+		- else if(is_tag())
+			h1 #{res.index.oldprerelease_title_by_tag}:#{page.tag}
+		- else if(page != undefined)
 			h1 #{page.title}
 	nav#bread
 
