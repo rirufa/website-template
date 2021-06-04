@@ -26,21 +26,7 @@
 					"text":"dummy"
 				}
 			]
-		},
-		"pages":[
-			{
-				"path":"/ja/test",
-				"title":"TEST-JA",
-				"thumbnail":"",
-				"summary":"ABOUT TEST"
-			},
-			{
-				"path":"/ja/test2",
-				"title":"TEST-JA",
-				"thumbnail":"",
-				"summary":"ABOUT TEST"
-			}
-		]
+		}
 	},
 	"en": {
 		"lang_name":"English",
@@ -69,20 +55,6 @@
 					"text":"dummy"
 				}
 			]
-		},
-		"pages":[
-			{
-				"path":"/en/test",
-				"title":"TEST-EN",
-				"thumbnail":"",
-				"summary":"ABOUT TEST"
-			},
-			{
-				"path":"/en/test2",
-				"title":"TEST2-EN",
-				"thumbnail":"",
-				"summary":"ABOUT TEST"
-			}
-		]
+		}
 	}
 }

@@ -18,10 +18,8 @@ hexo.extend.helper.register('get_pages', function () {
   const self = this;
   //現在表示中のページの言語
   const lang = self.get_current_lang(this.page);
-  if(this.site.data.resources[lang] == undefined)
-    return [];
-  else
-    return this.site.data.resources[lang].pages;
+  pages = hexo.locals.get('pages').filter(page => page.language == lang && page.layout == 'page');
+  return pages.data;
 });
 
 hexo.extend.helper.register('gen_lang_switches', function(label){

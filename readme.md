@@ -18,6 +18,8 @@ title: [title]
 language: [laguage]
 date: 2020-11-20 11:42:59
 tags:
+thumbnail: [url of image]
+summary: [summary]
 ---
 ```
 
