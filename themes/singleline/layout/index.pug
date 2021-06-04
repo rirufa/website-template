@@ -12,9 +12,10 @@ block content
 			#topics
 				each item in get_pages()
 					#summary
+						h3
+							a(href=`${item.path}`) #{item.title}
 						img(src=`${item.thumbnail}`)
-						p
-							a(href=`${item.path}`) #{item.title} #{item.summary}
+						p #{item.summary}
 			#prerelease
 				h2 #{res.index.prerelease_title}
 				table
