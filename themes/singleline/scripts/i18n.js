@@ -5,6 +5,8 @@ const indexGenerator = require('hexo-generator-index/lib/generator');
 const archiveGenerator = require('hexo-generator-archive/lib/generator');
 const categoryGenerator = require('hexo-generator-category/lib/generator');
 const tagGenerator = require('hexo-generator-tag/lib/generator');
+const { magenta } = require('chalk');
+const tildify = require('tildify');
 const {
     pathJoin,
     isDefaultLanguage,
@@ -19,6 +21,32 @@ const {
     formatIso639,
     getClosestRfc5646WithCountryCode
 } = require('../lib/i18n')(hexo);
+
+// Creators
+
+// mask the original post creator
+const _original_post_creator = hexo.post.create.bind(hexo.post);
+
+hexo.post.create = async (data, replace) => {
+  let results = [];
+
+  for (let lang of getDisplayLanguages()) {
+    data['language'] = lang;
+    let res = await _original_post_creator(data, replace);
+    results.push(res);
+  }
+
+  hexo.log.info(
+    'Posts created in: %s',
+    magenta(getDisplayLanguages())
+  );
+
+  for (let i in results) {
+    if (i != 0) hexo.log.info('Created: %s', magenta(tildify(results[i].path)));
+  }
+
+  return results[0];
+};
 
 /**
  * Modify previous and next post link
