@@ -1,10 +1,10 @@
 ---
 layout: page
-title: abou-test
+title: about-test-en
 language: en
 date: 2020-11-19 13:24:57
 tags:
-thumbnail:
+thumbnail: /image/default_topics.png
 summary: about test
 ---
 test

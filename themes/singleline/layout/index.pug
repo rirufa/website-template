@@ -14,7 +14,8 @@ block content
 					#summary
 						h3
 							a(href=`/${item.path}`) #{item.title}
-						img(src=`${item.thumbnail}`)
+						- if(item.thumbnail != null)
+							img(src=`${item.thumbnail}`)
 						p #{item.summary}
 			#prerelease
 				h2 #{res.index.prerelease_title}

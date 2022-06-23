@@ -1,10 +1,10 @@
 ---
 layout: page
-title: about test
+title: about test-ja
 language: ja
 date: 2020-11-19 13:24:57
 tags:
-thumbnail:
+thumbnail: /image/default_topics.png
 summary: test
 ---
 test
