@@ -1,0 +1,5 @@
+# 認証しないと見れないようにするには以下をコメントアウトする
+# RewriteEngine on
+# RewriteCond %{REQUEST_URI} !/auth(.*) [NC]
+# RewriteCond %{HTTP_COOKIE} !auth=true [NC]
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/auth/index.php?jmp=%{REQUEST_URI} [R=301,L]

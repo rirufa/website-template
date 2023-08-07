@@ -23,6 +23,9 @@ pretty_urls:
 
 theme: singleline
 
+include:
+  - .htaccess
+
 highlight:
   enable: true
   line_number: false
