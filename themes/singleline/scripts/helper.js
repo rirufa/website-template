@@ -18,7 +18,7 @@ hexo.extend.helper.register('get_pages', function () {
   const self = this;
   //現在表示中のページの言語
   const lang = self.get_current_lang(this.page);
-  pages = hexo.locals.get('pages').filter(page => page.language == lang && page.layout == 'page');
+  pages = hexo.locals.get('pages').filter(page => page.language == lang && page.layout == 'page' && page.hidden != true);
   return pages.data;
 });
 

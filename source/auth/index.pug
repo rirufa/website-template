@@ -1,0 +1,44 @@
+---
+layout: page
+title: 認証
+language: ja
+date: 2020-11-19 13:24:57
+tags:
+thumbnail: /image/default_topics.png
+summary: about ev-king
+hidden: true
+---
+script
+	| function getAge(birthday){
+	| var today = new Date();
+	| var thisYearsBirthday = new Date(today.getFullYear(), birthday.getMonth(), birthday.getDate());
+	| var age = today.getFullYear() - birthday.getFullYear();
+	|   if(today < thisYearsBirthday){
+	|     age--;
+	|   }
+	|   return age;
+	| }
+	| function onCheckAge()
+	| {
+	|   var result = new Date(document.birthday_check.datetime.value);
+	|   if(isNaN(result))
+	|   {
+	|      window.alert('日付を入力してください');
+	|      return;
+	|   }
+	|   var age = getAge(result);
+	|   if(age < 18)
+	|  {
+	|    window.alert('18歳未満は利用できません');
+	|    location.href='https://yahoo.co.jp';
+	|    }else{
+	|      document.cookie = 'auth=true;path=/;max-age='+60*60*24*8;
+	|      let url = new URL(window.location.href);
+	|      let params = url.searchParams;
+	|      location.href=decodeURIComponent(params.get('jmp'));
+	|    }
+	| }
+p 生年月日を入力してください
+form(name='birthday_check')
+	input(name='datetime' type="date" )
+	input(onclick='onCheckAge()', type='button' value='送信')
