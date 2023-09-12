@@ -10,3 +10,10 @@ tags:
 - japanse
 ---
 englist-test
+
+this is english
+
+![](test.png)
+
+It will show global asset's image
+![](/image/default_topics.png)
