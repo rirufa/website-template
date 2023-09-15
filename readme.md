@@ -1,19 +1,12 @@
 # 記事の作り方
-hexo new page [title]ではまともに作れません
-手動で以下の感じになるように記事を作ってください
-
-```
-/[language]/[title]/index.md
-```
-
-index.mdは以下のようにしてください
+hexo new page [title]で作成後、index.mdは以下のようにしてください
 
 ```
 ---
 layout: page
 title: [title]
 language: [laguage]
-date: 2020-11-20 11:42:59
+date: [date]
 tags:
 thumbnail: [url of image]
 summary: [summary]

@@ -28,18 +28,30 @@ const {
 const _original_post_creator = hexo.post.create.bind(hexo.post);
 
 hexo.post.create = async (data, replace) => {
+  let res;
   let results = [];
-
-  for (let lang of getDisplayLanguages()) {
-    data['language'] = lang;
-    let res = await _original_post_creator(data, replace);
-    results.push(res);
+  if(data.path || data.layout == 'draft')
+  {
+      res = await _original_post_creator(data, replace);
+      results.push(res);
+  }else{
+    for (let lang of getDisplayLanguages()) {
+      // filter/new_post_path.jsとhexo/post.jsのPost.createからコピペ
+      data.slug = util.slugize((data.slug || data.title).toString(), { transform: hexo.config.filename_case });
+      switch (data.layout) {
+        case 'page':
+          data['path'] = pathJoin(lang, data.slug, 'index');
+          break;
+      }
+      data['language'] = lang;
+      let res = await _original_post_creator(data, replace);
+      results.push(res);
+      hexo.log.info(
+        'Posts created in: %s',
+        magenta(tildify(res.path))
+      );
+    }
   }
-
-  hexo.log.info(
-    'Posts created in: %s',
-    magenta(getDisplayLanguages())
-  );
 
   for (let i in results) {
     if (i != 0) hexo.log.info('Created: %s', magenta(tildify(results[i].path)));
@@ -48,6 +60,9 @@ hexo.post.create = async (data, replace) => {
   return results[0];
 };
 
+
+
+// hexo-theme-minos/scripts/10_i18n.js　からコピペ
 /**
  * Modify previous and next post link
  */
