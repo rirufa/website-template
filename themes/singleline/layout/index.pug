@@ -20,7 +20,7 @@ block content
 			#prerelease
 				h2 #{res.index.prerelease_title}
 				table
-					each item in get_posts()
+					each item in page.posts.toArray()
 						tr
 							td #{date(item.date, "YYYY-MM-DD" )}
 							td

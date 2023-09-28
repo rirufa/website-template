@@ -22,14 +22,6 @@ hexo.extend.helper.register('get_pages', function () {
   return pages.data;
 });
 
-hexo.extend.helper.register('get_posts', function () {
-  const self = this;
-  //現在表示中のページの言語
-  const lang = self.get_current_lang(this.page);
-  pages = hexo.locals.get('posts').filter(page => page.language == lang);
-  return pages.data;
-});
-
 hexo.extend.helper.register('gen_lang_switches', function(label){
   const self = this;
   return self.get_langs().map(function(lang){
