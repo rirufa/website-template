@@ -25,7 +25,7 @@ block content
 							td #{date(item.date, "YYYY-MM-DD" )}
 							td
 								a(href=`/${item.path}`) #{item.title}
-				a(href=`${url_for('archives')}`) #{res.index.oldprerelease_title}
+				a(href=`${url_for_i18n('archives')}`) #{res.index.oldprerelease_title}
 
 block custom_footer
 	include _footer
