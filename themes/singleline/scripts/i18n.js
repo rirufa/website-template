@@ -3,7 +3,6 @@
 const _ = require('lodash');
 const util = require('hexo-util');
 const postGenerator = require('hexo/lib/plugins/generator/post');
-const indexGenerator = require('hexo-generator-index/lib/generator');
 const archiveGenerator = require('hexo-generator-archive/lib/generator');
 const categoryGenerator = require('hexo-generator-category/lib/generator');
 const tagGenerator = require('hexo-generator-tag/lib/generator');
@@ -94,34 +93,6 @@ hexo.extend.generator.register('post', function(locals) {
         return route;
     });
 });
-
-/**
- * Multi-language index generator.
- *
- * ATTENTION: This will override the default index generator!
- */
-hexo.extend.generator.register('index', injectLanguages(function(languages, locals) {
-    return _.flatten(languages.map((language) => {
-        // Filter posts by language considering. Posts without a language is considered of the default language.
-        const posts = locals.posts.filter(postFilter(language));
-        if (posts.length === 0) {
-            return null;
-        }
-        const routes = indexGenerator.call(this, Object.assign({}, locals, {
-            posts: posts
-        }));
-        return routes.map(route => {
-            const data = Object.assign({}, route.data, {
-                base: pathJoin(language, route.data.base),
-                current_url: pathJoin(language, route.data.current_url)
-            });
-            return Object.assign({}, route, {
-                path: pathJoin(language, route.path),
-                data: data
-            });
-        });
-    }).filter(post => post !== null));
-}));
 
 /**
  * Multi-language archive generator.

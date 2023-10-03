@@ -15,10 +15,11 @@
 			"query_button_label":"お問い合わせはこちらから"
 		},
 		"index": {
-			"prerelease_title":"プレリリース",
-			"oldprerelease_title":"過去のプレリリース",
-			"oldprerelease_title_by_category":"カテゴリー一覧",
-			"oldprerelease_title_by_tag":"タグ一覧"
+			"prerelease_title":"ニュース",
+			"oldarchives_title":"過去のニュース",
+			"oldarchives_summary":"過去のニュースの一覧です",
+			"oldarchives_title_by_category":"カテゴリー一覧",
+			"oldarchives_title_by_tag":"タグ一覧"
 		}
 	},
 	"en": {
@@ -39,6 +40,7 @@
 		"index": {
 			"prerelease_title":"NEWS",
 			"oldprerelease_title":"OLD NEWS",
+			"oldprerelease_summary":"This is old news list",
 			"oldprerelease_title_by_category":"CATEGORIES LIST",
 			"oldprerelease_title_by_tag":"TAGS LIST"
 		}
