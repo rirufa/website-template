@@ -37,6 +37,7 @@ script
 	|      let params = url.searchParams;
 	|      location.href=decodeURIComponent(params.get('jmp'));
 	|    }
+	|    return false;
 	| }
 p 生年月日を入力してください
 form(name='birthday_check')
