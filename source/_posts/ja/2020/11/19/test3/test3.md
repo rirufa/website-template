@@ -13,7 +13,7 @@ japanse-test
 
 これは日本語版です
 
-![](test.png)
+![](test3/test.png)
 
 グローバルアセットの画像を表示しています
 ![](/image/default_topics.png)

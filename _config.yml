@@ -30,8 +30,9 @@ highlight:
   line_number: false
 
 post_asset_folder: true
-marked:
-  prependRoot: true
-  postAsset: true
+markdown:
+  images:
+    prependRoot: true
+    postAsset: true
 
 disqus_shortname: hexojs
