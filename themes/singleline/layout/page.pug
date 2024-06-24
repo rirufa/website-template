@@ -4,7 +4,11 @@ block custom_header
 	include _header
 	#main_titile
 		- if(page != undefined)
-			h1 #{page.title}
+			- if(page.title_image != undefined)
+				h1
+					img(src=`${page.title_image}` alt=`${page.title}`)
+			- else
+				h1 #{page.title}
 	nav#bread
 
 block content
