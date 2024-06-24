@@ -5,41 +5,29 @@ language: ja
 date: 2020-11-19 13:24:57
 tags:
 thumbnail: /image/default_topics.png
-summary: about ev-king
+summary: about website template
 hidden: true
 ---
 script
-	| function getAge(birthday){
-	| var today = new Date();
-	| var thisYearsBirthday = new Date(today.getFullYear(), birthday.getMonth(), birthday.getDate());
-	| var age = today.getFullYear() - birthday.getFullYear();
-	|   if(today < thisYearsBirthday){
-	|     age--;
-	|   }
-	|   return age;
-	| }
-	| function onCheckAge()
+	| function onCheckAge(result)
 	| {
-	|   var result = new Date(document.birthday_check.datetime.value);
-	|   if(isNaN(result))
-	|   {
-	|      window.alert('日付を入力してください');
-	|      return;
-	|   }
-	|   var age = getAge(result);
-	|   if(age < 18)
+	|   if(result)
 	|  {
 	|    window.alert('18歳未満は利用できません');
 	|    location.href='https://yahoo.co.jp';
 	|    }else{
-	|      document.cookie = 'auth=true;path=/;max-age='+60*60*24*8;
 	|      let url = new URL(window.location.href);
+	|      // ８日間保存する
+	|      document.cookie = 'auth=true;path=/;max-age=691200;domain=' + url.hostname;
 	|      let params = url.searchParams;
-	|      location.href=decodeURIComponent(params.get('jmp'));
+	|      let new_url = url.origin + decodeURIComponent(params.get('jmp')) + "?authed=true";
+	|      location.href= new_url;
 	|    }
-	|    return false;
+	| return false;
 	| }
-p 生年月日を入力してください
-form(name='birthday_check')
-	input(name='datetime' type="date" )
-	input(onclick='onCheckAge()', type='button' value='送信')
+p １８歳以上ですか？
+div(name='birthday_check')
+	a(href='#' onclick='onCheckAge(false)')
+		img(src=`/auth/image/1-2-button1.svg` alt=`YES` class=`button_img`)
+	a(href='#' onclick='onCheckAge(true)')
+		img(src=`/auth/image/1-2-button2.svg` alt=`NO` class=`button_img`)
