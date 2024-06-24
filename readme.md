@@ -39,6 +39,7 @@ hexo new page [title]で作成後、index.mdは以下のようにしてくださ
 ---
 layout: page
 title: [title]
+title_image: [url of image]
 language: [laguage]
 date: [date]
 tags:
