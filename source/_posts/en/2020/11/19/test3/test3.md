@@ -13,7 +13,7 @@ englist-test
 
 this is english
 
-![](test3/test.png)
+![](test.png)
 
 It will show global asset's image
 ![](/image/default_topics.png)

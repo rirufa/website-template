@@ -14,7 +14,7 @@ timezone: ''
 url: https://test.io
 root: /
 permalink: :language/:year/:month/:day/:title/
-new_post_name: :language/:year/:month/:day/:title.md
+new_post_name: :language/:year/:month/:day/:title/:title.md
 per_page: 0
 pretty_urls:
   trailing_index: false
