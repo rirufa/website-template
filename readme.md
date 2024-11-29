@@ -55,5 +55,10 @@ summary: [summary]
 本番環境ではGoogleのクライアントIDの設定が必要になります
 PHP 8.1.6で動作確認済みです
 
+## アップロードするには
+WinSCPをインストール後、deploy.cmdを実行してください
+実行後、deploy.iniが生成されているので、「FTP_SERVER_HOST=DUMMY」のDUMMYの部分を適切な値にしてください
+スターサーバーだと「FTP_SERVER_HOST=sv69.star.ne.jp」みたいな感じで設定します
+
 ## 著作権
 画像はいらすとやを使用しています。それ以外はMITライセンスです
